@@ -5,7 +5,7 @@ public class Kotic {
     int weight;
     String meow;
     int satiety;
-    public static int count = 0;
+    static int count = 0;
 
     public Kotic(int prettiness, String name, int weight, String meow, int satiety){
         this.prettiness = prettiness;
@@ -16,8 +16,7 @@ public class Kotic {
         count++;
     }
 
-    public Kotic(){
-    }
+    public Kotic(){ count++; }
 
     public void setKotic(int prettiness, String name, int weight, String meow, int satiety) {
         this.prettiness = prettiness;
@@ -28,7 +27,7 @@ public class Kotic {
     }
 
     public void liveAnotherDay() {
-        for(int i=0; i<25; i++) {
+        for(int i=0; i<24; i++) {
             int n = (int) (Math.random() * 5 + 1);
             switch (n) {
                 case 1:
@@ -69,6 +68,10 @@ public class Kotic {
     public int getSatiety() {
         return satiety;
     }
+
+    public static int getCount() {
+        return count;
+    }
     private
 
     boolean satietyCheck() {
@@ -86,7 +89,7 @@ public class Kotic {
 
     void eat(int satietyCount, String foodName) {
         this.satiety += satietyCount;
-        System.out.println("The Cat is eating");
+        System.out.println("The Cat is eating: " + foodName);
     }
 
     void eat() {
@@ -96,10 +99,12 @@ public class Kotic {
     boolean play() {
         if (satietyCheck() == true) {
             System.out.println("The Cat is playing");
+            this.satiety -= 1;
             return true;
         }
         else {
             System.out.println("The cat can\'t play until he eat.");
+            eat(3);
             return false;
         }
     }
@@ -107,10 +112,12 @@ public class Kotic {
     boolean sleep() {
         if (satietyCheck() == true) {
             System.out.println("The Cat is sleeping");
+            this.satiety -= 1;
             return true;
         }
         else {
             System.out.println("The cat can\'t sleep until he eat.");
+            eat(3);
             return false;
         }
     }
@@ -118,10 +125,12 @@ public class Kotic {
     boolean chaseMouse() {
         if (satietyCheck() == true) {
             System.out.println("The Cat is chasing a mouse");
+            this.satiety -= 1;
             return true;
         }
         else {
             System.out.println("The cat can\'t chase until he eat.");
+            eat(3);
             return false;
         }
     }
@@ -129,10 +138,12 @@ public class Kotic {
     boolean jump() {
         if (satietyCheck() == true) {
             System.out.println("The Cat is jumping");
+            this.satiety -= 1;
             return true;
         }
         else {
             System.out.println("The cat can\'t jump until he eat.");
+            eat(3);
             return false;
         }
     }

@@ -7,6 +7,6 @@ public class Application {
 
         System.out.println(cat.getMeow() == cat2.getMeow());
         cat.liveAnotherDay();
-        System.out.println(Kotic.count);
+        System.out.println(Kotic.getCount());
     }
 }
