@@ -7,10 +7,6 @@ public class Worker {
     }
 
     void getVoice(Voice animal) {
-        if (animal instanceof Voice) {
-            System.out.println(animal.voice());
-        } else {
-            System.out.println("Animal do not have voice ");
-        }
+        System.out.println(animal.voice());
     }
 }
