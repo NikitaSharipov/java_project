@@ -19,8 +19,8 @@ public class Zoo {
         Deer deer = new Deer(5);
         Duck duck = new Duck(5);
 
-        Grass grass = new Grass();
-        Meat meat = new Meat();
+        Grass grass = new Grass(1, "Usual grass");
+        Meat meat = new Meat(6, "Unusual meat");
 
         Worker worker = new Worker();
 

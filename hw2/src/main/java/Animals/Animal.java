@@ -9,6 +9,7 @@ public class Animal {
         this.satiety = satiety;
     }
     public void eat (Food food) {
+        this.satiety += food.getSatiety();
     }
     public int getSatiety() {
         return satiety;
