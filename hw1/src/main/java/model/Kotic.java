@@ -1,11 +1,11 @@
 package model;
 public class Kotic {
-    int prettiness;
-    String name;
-    int weight;
-    String meow;
-    int satiety;
-    static int count = 0;
+    private int prettiness;
+    private String name;
+    private int weight;
+    private String meow;
+    private int satiety;
+    private static int count = 0;
 
     public Kotic(int prettiness, String name, int weight, String meow, int satiety){
         this.prettiness = prettiness;
