@@ -5,12 +5,12 @@ import Animals.Run;
 import Animals.Voice;
 
 public class Cow extends Herbivore implements Run, Voice {
-    int satiety;
+//    int satiety;
     public Cow(int satiety){
         super(satiety);
     }
     public void run() {
-        this.satiety -= 1;
+        this.setSatiety(this.getSatiety() - 1);
         System.out.println("Cow is running");
     }
 

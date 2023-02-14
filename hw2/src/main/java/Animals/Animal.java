@@ -2,8 +2,8 @@ package Animals;
 
 import Food.Food;
 
-public class Animal {
-    int satiety;
+public abstract class Animal {
+    private int satiety;
 
     public Animal(int satiety){
         this.satiety = satiety;
@@ -13,6 +13,10 @@ public class Animal {
     }
     public int getSatiety() {
         return satiety;
+    }
+
+    public void setSatiety(int satiety) {
+        this.satiety =  satiety;
     }
 
     private

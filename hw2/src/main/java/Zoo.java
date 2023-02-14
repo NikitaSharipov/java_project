@@ -40,5 +40,7 @@ public class Zoo {
             lake.get(i).swim();
         }
 
+        cow.run();
+        System.out.println(cow.getSatiety());
     }
 }
