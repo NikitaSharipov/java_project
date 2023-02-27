@@ -5,8 +5,9 @@ import Food.Food;
 import Food.Meat;
 
 public class Carnivorous extends Animal {
-    public Carnivorous(int satiety){
-        super(satiety);
+    public Carnivorous(int satiety, String name){
+        super(satiety, name);
+        this.setType("Carnivorous");
     }
 
     public void eat(Food food) {

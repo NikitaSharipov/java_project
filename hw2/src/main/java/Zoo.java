@@ -11,13 +11,13 @@ import java.util.ArrayList;
 
 public class Zoo {
     public static void main(String[] args) {
-        Lion lion = new Lion(5);
-        Eagle eagle = new Eagle(5);
-        Shark shark = new Shark(5);
+        Lion lion = new Lion(5, "lion_name");
+        Eagle eagle = new Eagle(5, "eagle_name");
+        Shark shark = new Shark(5, "shark_name");
 
-        Cow cow = new Cow(5);
-        Deer deer = new Deer(5);
-        Duck duck = new Duck(5);
+        Cow cow = new Cow(5, "cow_name");
+        Deer deer = new Deer(5, "deer_name");
+        Duck duck = new Duck(5, "duck_name");
 
         Grass grass = new Grass(1, "Usual grass");
         Meat meat = new Meat(6, "Unusual meat");
@@ -42,5 +42,18 @@ public class Zoo {
 
         cow.run();
         System.out.println(cow.getSatiety());
+
+        Aviary сarnivorousAviary = new Aviary("Carnivorous");
+        System.out.println(cow.getType());
+
+        сarnivorousAviary.addAnimal(cow);
+        сarnivorousAviary.addAnimal(lion);
+        сarnivorousAviary.addAnimal(eagle);
+
+        сarnivorousAviary.typeAnimalsNamesInside();
+
+        сarnivorousAviary.deleteAnimal("lion_name");
+
+        сarnivorousAviary.typeAnimalsNamesInside();
     }
 }

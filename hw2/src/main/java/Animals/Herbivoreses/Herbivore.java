@@ -6,8 +6,9 @@ import Food.Grass;
 
 public class Herbivore extends Animal {
 
-    public Herbivore(int satiety){
-        super(satiety);
+    public Herbivore(int satiety, String name){
+        super(satiety, name);
+        this.setType("Herbivore");
     }
     public void eat(Food food) {
         if (food instanceof Grass) {

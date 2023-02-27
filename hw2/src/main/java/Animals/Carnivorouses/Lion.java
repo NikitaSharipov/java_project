@@ -5,8 +5,8 @@ import Animals.Voice;
 import Animals.Run;
 
 public class Lion extends Carnivorous implements Voice,Run {
-    public Lion(int satiety){
-        super(satiety);
+    public Lion(int satiety, String name){
+        super(satiety, name);
     }
     public void run() {
         this.setSatiety(this.getSatiety() - 1);
