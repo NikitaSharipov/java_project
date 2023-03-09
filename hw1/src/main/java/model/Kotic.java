@@ -103,7 +103,7 @@ public class Kotic {
             return true;
         }
         else {
-            System.out.println("The cat can\'t play until he eat.");
+            System.out.print("The cat can\'t play until he eat. ");
             eat(3);
             return false;
         }
@@ -116,7 +116,7 @@ public class Kotic {
             return true;
         }
         else {
-            System.out.println("The cat can\'t sleep until he eat.");
+            System.out.print("The cat can\'t sleep until he eat. ");
             eat(3);
             return false;
         }
@@ -129,7 +129,7 @@ public class Kotic {
             return true;
         }
         else {
-            System.out.println("The cat can\'t chase until he eat.");
+            System.out.print("The cat can\'t chase until he eat. ");
             eat(3);
             return false;
         }
@@ -142,7 +142,7 @@ public class Kotic {
             return true;
         }
         else {
-            System.out.println("The cat can\'t jump until he eat.");
+            System.out.print("The cat can\'t jump until he eat. ");
             eat(3);
             return false;
         }
