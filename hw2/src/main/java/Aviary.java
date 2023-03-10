@@ -4,22 +4,42 @@ import java.util.HashSet;
 
 public class Aviary <T extends Animal> {
     String type;
+    private int size;
     private HashSet<T> animals = new HashSet<T>();
 
+    Aviary(String type, int size) {
+        this.type = type;
+        this.size = size;
+    }
+
+    public void typeAnimalsInside(String name) {
+        for (T animal : animals) {
+            if (animal.getName().equals(name)) {
+                System.out.println(animal);
+            } else {
+                System.out.println("There is no animal with this name");
+            }
+        }
+    }
+
     public void typeAnimalsNamesInside() {
-        System.out.println(animals);
+        for (T animal : animals) {
+            System.out.println(animal.getName());
+        }
     }
 
     public HashSet<T> getAnimals () {
         return animals;
     }
-    Aviary(String type) {
-        this.type = type;
-    }
 
-    public void addAnimal(Animal animal) {
+    public void addAnimal(T animal) {
         if (typeCheck(animal.getType())) {
-            animals.add((T) animal);
+            if (sizeCheck(animal.getSize())) {
+                animals.add((T) animal);
+                System.out.println("Animal has been added");
+            } else {
+                System.out.println("We can not add this animal to Aviary because of wrong animal size");
+            }
         } else {
             System.out.println("We can not add this animal to Aviary because of wrong animal type");
         };
@@ -39,5 +59,13 @@ public class Aviary <T extends Animal> {
 
     private boolean typeCheck(String animalType) {
        return type.equals(animalType);
+    }
+
+    private boolean sizeCheck(int animalSize) {
+        if (animalSize <= this.size) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }

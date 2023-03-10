@@ -6,4 +6,8 @@ public class Meat extends Food{
         this.satiety = satiety;
         this.title = title;
     }
+
+    public int getSatiety() {
+        return satiety;
+    }
 }

@@ -6,10 +6,12 @@ public abstract class Animal {
     private int satiety;
     private String name;
     private String type;
+    private int size;
 
-    public Animal(int satiety, String name){
+    public Animal(int satiety, String name, int size){
         this.satiety = satiety;
         this.name = name;
+        this.size = size;
     }
     public void eat (Food food) {
         this.satiety += food.getSatiety();
@@ -29,6 +31,7 @@ public abstract class Animal {
     public String getName() {
         return name;
     }
+    public int getSize() { return size; }
 
     public void setName(String name) {
         this.name =  name;

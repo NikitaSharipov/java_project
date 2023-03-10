@@ -7,8 +7,8 @@ import Animals.Fly;
 import Animals.Swim;
 
 public class Duck extends Herbivore implements Fly, Voice, Swim {
-    public Duck(int satiety, String name){
-        super(satiety, name);
+    public Duck(int satiety, String name, int size){
+        super(satiety, name, size);
     }
     public void fly() {
         this.setSatiety(this.getSatiety() - 1);
