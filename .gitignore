@@ -125,8 +125,3 @@ fabric.properties
 .idea/caches/build_file_checksums.ser
 
 /.idea/
-!/.gitignore
-!/.gitignore
-!/pom.xml
-!/pom.xml
-!/pom.xml
