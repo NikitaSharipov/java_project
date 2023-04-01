@@ -6,6 +6,7 @@ import Food.Grass;
 import Food.WrongFoodException;
 
 public class Herbivore extends Animal {
+    private int satiety;
 
     public Herbivore(int satiety, String name, int size){
         super(satiety, name, size);
@@ -23,5 +24,9 @@ public class Herbivore extends Animal {
         catch (WrongFoodException ex) {
             System.out.println("Wrong type of food. Animal can not eat meat");
         }
+    }
+
+    public int getSatiety() {
+        return satiety;
     }
 }

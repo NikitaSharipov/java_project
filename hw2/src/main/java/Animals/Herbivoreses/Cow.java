@@ -5,7 +5,6 @@ import Animals.Run;
 import Animals.Voice;
 
 public class Cow extends Herbivore implements Run, Voice {
-//    int satiety;
     public Cow(int satiety, String name, int size){
         super(satiety, name, size);
     }

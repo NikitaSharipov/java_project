@@ -16,9 +16,11 @@ public abstract class Animal {
     public void eat (Food food) {
         this.satiety += food.getSatiety();
     }
-    public int getSatiety() {
-        return satiety;
-    }
+//    public int getSatiety() {
+//        return satiety;
+//    }
+
+     public abstract int getSatiety();
     public void setSatiety(int satiety) {
         this.satiety =  satiety;
     }
