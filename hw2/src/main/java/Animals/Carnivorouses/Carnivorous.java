@@ -11,17 +11,9 @@ public class Carnivorous extends Animal {
         super(satiety, name, size);
         this.setType("Carnivorous");
     }
-
-
-
     public int getSatiety() {
         return satiety;
     }
-
-//    public int getSatiety(){
-//        return 0;
-//    };
-
     public void eat(Food food) {
         try {
             if (food instanceof Meat) {
