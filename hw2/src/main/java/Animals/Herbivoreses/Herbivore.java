@@ -22,7 +22,7 @@ public class Herbivore extends Animal {
             }
         }
         catch (WrongFoodException ex) {
-            System.out.println("Wrong type of food. Animal can not eat meat");
+            System.out.println("ERROR" + ex.toString());
         }
     }
 
