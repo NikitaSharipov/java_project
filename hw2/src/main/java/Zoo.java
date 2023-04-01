@@ -1,3 +1,4 @@
+import Animals.Carnivorouses.Carnivorous;
 import Animals.Carnivorouses.Eagle;
 import Animals.Carnivorouses.Lion;
 import Animals.Carnivorouses.Shark;
@@ -44,20 +45,20 @@ public class Zoo {
         cow.run();
         System.out.println(cow.getSatiety());
 
-        Aviary сarnivorousAviary = new Aviary("Carnivorous", 3);
+        Aviary<Carnivorous> сarnivorousAviary = new Aviary(3);
         System.out.println(cow.getType());
 
-        сarnivorousAviary.addAnimal(cow);
+//        сarnivorousAviary.addAnimal(cow);
         сarnivorousAviary.addAnimal(lion);
         сarnivorousAviary.addAnimal(eagle);
 
-        сarnivorousAviary.typeAnimalsNamesInside();
-        сarnivorousAviary.typeAnimalsInside("lion_name");
+        сarnivorousAviary.AnimalNamesInside();
+        сarnivorousAviary.AnimalsInside("lion_name");
 
         сarnivorousAviary.deleteAnimal("lion_name");
 
-        сarnivorousAviary.typeAnimalsNamesInside();
-        сarnivorousAviary.typeAnimalsInside("lion_name");
+        сarnivorousAviary.AnimalNamesInside();
+        сarnivorousAviary.AnimalsInside("lion_name");
 
 //        AviarySize size = AviarySize.Big;
         System.out.println(cow.getSize());
